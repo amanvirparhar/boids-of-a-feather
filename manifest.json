@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Boids of a Feather",
+  "version": "1.0.0",
+  "description": "A Chrome extension that spawns cursors to keep you company.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
+    }
+  ]
+}
